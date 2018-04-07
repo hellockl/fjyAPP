@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<import src="../common/product-item.wxml"/>
+<view>
+  <view class="top">
+    <view class="info">
+      <view class="headPic-img">
+        <image class="headPic" src="{{headPic}}"></image>
+      </view>
+      <view>
+        <view><text>18701881920</text></view>
+        <view><text>曹大大</text></view>
+      </view>
+    </view>    
+    <view class="call">
+      人工咨询
+    </view>
+  </view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">主打产品</view>
+  </view>
+  <view class='product_list'>
+    <block wx:for="{{product_list}}" wx:key="k">
+      <template is="product-item" data="{{item}}" />
+    </block>
+  </view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">民间产品</view>
+  </view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">银行产品</view>
+  </view>
+</view>

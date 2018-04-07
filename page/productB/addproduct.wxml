@@ -1,0 +1,64 @@
+<!--page/shuaidan/shuaidan.wxml-->
+<view>
+  
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">产品名称</view>
+          <input placeholder="填写产品名称" class="card-input" style="text-align:right " value="{{product_name}}" placeholder-class="gray3" maxlength="20" name="product_name" />
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:40%'>产品特点</view>
+          <input placeholder="填写产品特点" class="card-input" placeholder-class="gray3" maxlength="20" name="trait" value="{{trait}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">资金方</view>
+          <input placeholder="请填资金方" class="card-input" placeholder-class="gray3" maxlength="30" name="fund" value="{{fund}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:70%'>打卡工资</view>
+          <radio-group  name="basicWages" class="radio-group">
+            <label class="radio-class" wx:for="{{daka_status}}" wx:key="property">
+              <radio color="#3392ff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </radio-group>
+        </view>
+        <view class="card-inputlabel">
+          <navigator class="navigator" url="pages/navigator/navigator">
+            <view class="navigator-text">人员</view>
+            <view class="navigator-arrow"></view>
+          </navigator> 
+        </view>
+        <view class="card-inputlabel">
+          <navigator class="navigator" url="pages/navigator/navigator">
+            <view class="navigator-text">产品</view>
+            <view class="navigator-arrow"></view>
+          </navigator> 
+        </view> 
+        <view class="card-inputlabel">
+          <navigator class="navigator" url="pages/navigator/navigator">
+            <view class="navigator-text">房屋</view>
+            <view class="navigator-arrow"></view>
+          </navigator> 
+        </view> 
+        <view class="card-inputlabel">
+          <navigator class="navigator" url="pages/navigator/navigator">
+            <view class="navigator-text">所需材料</view>
+            <view class="navigator-arrow"></view>
+          </navigator> 
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" >包装内容</view>
+          <textarea auto-focus="true" style="height: 5em" />
+        </view>  
+      </view>
+   
+      <view class="">
+        <button formType="submit" class="btn">提交</button>
+      </view>
+    </view>
+  </form>
+  
+</view>

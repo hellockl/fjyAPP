@@ -1,0 +1,163 @@
+<!--page/productdetail/productdetail.wxml-->
+<!--page/productlsit/productlist.wxml-->
+<view class='product_list'>
+  <view class="product_item">
+    <view class='item_top'>
+      <view class='p_title'>
+        <view class='dian'></view>
+        {{productInfo.productName}}</view>
+      <view class='p_star'>
+        <block wx:for="{{productInfo.star}}" wx:for-item="i" wx:key="k">
+          <image class='star-img' src="../../image/star-{{i}}.png"></image>
+        </block>
+      </view>
+      <view class='p_tag'>
+        <view class='content'>{{productInfo.productCharacterOne}}</view>
+        <view class='content'>{{productInfo.productCharacterTwo}}</view>
+        <view class='content'>{{productInfo.productCharacterThree}}</view>
+      </view>
+    </view>
+    <view class='item_footer'>
+      <text class='p-content'>{{productInfo.productIntroduce}}</text>
+    </view>
+  </view>
+  <view>
+    <image src='../../image/p-shadow.png' style='width:100%;height:20px'></image>
+    <view class="navbar">
+      <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navbar}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onNavbarTap">{{item}}</text>
+    </view>
+    <view class="recommend" hidden="{{currentTab!==0}}">
+      <view class='recommend-one'>
+        <view class='content1'>
+          额度范围
+        </view>
+        <view class='content2'>
+          {{productInfo.loanQuota}}万
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          还款方式
+        </view>
+        <view class='content2'>
+          {{productInfo.repaymentMode}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          借款期限
+        </view>
+        <view class='content2'>
+          {{productInfo.loanTerm}}年
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          返佣比例
+        </view>
+        <view class='content2'>
+          {{productInfo.backRate}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          利率说明
+        </view>
+        <view class='content3'>
+          <text class='one'> {{productInfo.moneyRateIntroduce}}</text>
+          
+        </view>
+      </view>
+    </view>
+    <view class="recommend" hidden="{{currentTab!==1}}">
+      <view class='recommend-one'>
+        <view class='content1'>
+          业务范围
+        </view>
+        <view class='content2'>
+          {{productInfo.businessArea}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          禁止户籍
+        </view>
+        <view class='content2'>
+          {{productInfo.forbidArea}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          年龄要求
+        </view>
+        <view class='content2'>
+          {{productInfo.age}}
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          是否上征信
+        </view>
+        <view class='content2'>
+          {{productInfo.creditStatus}}
+        </view>
+      </view>
+      <view class='require'>
+        <view class='require1'>
+          征信要求
+        </view>
+        <!-- <view class='require2'>
+          {{productInfo.creditRequire}}
+        </view> -->
+        <view class='content3'>
+          <text class='one'> {{productInfo.creditRequire}}</text>
+          
+        </view>
+      </view>
+      <view class='require'>
+        <view class='require1'>
+          其余要求
+        </view>
+        
+        <view class='content3'>
+          <text class='one'>{{productInfo.otherRequire}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="recommend" hidden="{{currentTab!==2}}">
+      <view class='recommend-one'>
+        <view class='content1'>
+          必备材料
+        </view>
+        <view class='content3'>
+          <text class='one'>{{productInfo.materialRequire}}</text>
+          <!-- <text class='two'>6.6%/10.3%(先息后本)</text> -->
+        </view>
+      </view>
+      <view class='recommend-one'>
+        <view class='content1'>
+          可选材料
+        </view>
+        <view class='content3'>
+          <text class='one'>{{productInfo.materialOptional}}</text>
+          <!-- <text class='two'>6.6%/10.3%(先息后本)</text> -->
+        </view>
+      </view>
+    </view>
+    <!-- <view class='recommend-one'>
+      <view class='content1'>
+        利率说明
+      </view>
+      <view class='content3'>
+        <text class='one'>6.6%-10.3%(等额本息)</text>
+        <text class='two'>6.6%/10.3%(先息后本)</text>
+      </view>
+    </view> -->
+
+    
+    
+
+  </view>
+  
+
+</view>

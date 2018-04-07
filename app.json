@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "page/index/index",
+    "page/component/index",
+    "page/logs/logs",
+    "page/card/card",
+    "page/createcard/createcard",
+    "page/shuaidan/shuaidan",
+    "page/productlist/productlist",
+    "page/productdetail/productdetail",
+    "page/orderlist/orderlist",
+    "page/mine/mine",
+    "page/mineNews/mineNews",
+    "page/contact/contact",
+    "page/withdrawals/withdrawals",
+    "page/email/email",
+    "page/addproduct/addproduct",
+    "page/productA/productA"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3392ff",
+    "navigationBarTitleText": "产品lite",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#92969c",
+    "selectedColor": "#03a5ef",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "pagePath": "page/index/index",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "page/shuaidan/shuaidan",
+        "iconPath": "image/shuaidan.png",
+        "selectedIconPath": "image/shuaidan.png",
+        "text": "甩单"
+      },
+      {
+        "pagePath": "page/addproduct/addproduct",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,45 @@
+<!--page/shuaidan/shuaidan.wxml-->
+<view>
+  
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">年龄</view>
+          <input placeholder="填写年龄" class="card-input" style="text-align:right " value="{{age}}" placeholder-class="gray3" maxlength="20" name="age" />
+        </view>
+        <view class="card-inputlabel">
+          <view class="label" style='width:40%'>年龄配注</view>
+          <input placeholder="填写年龄配注" class="card-input" placeholder-class="gray3" maxlength="20" name="age_remarks" value="{{age_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">国、户籍</view>
+          <input placeholder="请填国、户籍" class="card-input" placeholder-class="gray3" maxlength="30" name="nationality" value="{{nationality}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">国、户籍</view>
+          <input placeholder="请填国、户籍" class="card-input" placeholder-class="gray3" maxlength="30" name="nationality" value="{{nationality}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">征信界定</view>
+          <input placeholder="请填征信界定" class="card-input" placeholder-class="gray3" maxlength="30" name="credit_line" value="{{credit_line}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">征信界定备注</view>
+          <input placeholder="请填征信界定备注" class="card-input" placeholder-class="gray3" maxlength="30" name="credit_line_remarks" value="{{credit_line_remarks}}"/>
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">收入</view>
+          <input placeholder="请填收入" class="card-input" placeholder-class="gray3" maxlength="30" name="income" value="{{income}}"/>
+        </view>
+         
+      </view>
+   
+      <view class="">
+        <button formType="submit" class="btn">提交</button>
+      </view>
+    </view>
+  </form>
+  
+</view>

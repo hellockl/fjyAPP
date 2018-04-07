@@ -1,0 +1,43 @@
+<!--page/productlsit/productlist.wxml-->
+<view class='product_list'>
+  <block wx:for="{{product_list}}" wx:key="k">
+    <view class="product_item" id="{{item.productId}}" bindtap="navToProductDetail">
+      <view class='item_top'>
+        <view class='p_title' style="background:#3392ff">
+          <view class='dian'></view>
+          {{item.productName}}
+        </view>
+        <view class='p_star'>
+          <block wx:for="{{item.star}}" wx:for-item="i" wx:key="key">
+            <image class='star-img' src="../../image/star-{{i}}.png"></image>
+          </block>
+        </view>
+        <view class='p_tag'>
+          <view class='content' style='color:#3392ff;border-color:#3392ff' >{{item.productCharacterOne}}</view>
+          <view class='content' style='color:#3392ff;border-color:#3392ff' >{{item.productCharacterTwo}}</view>
+          <view class='content' style='color:#3392ff;border-color:#3392ff' >{{item.productCharacterThree}}</view>
+        </view>
+      </view>
+      <view class='item_footer'>
+        <view class='fybl' style='color:#3392ff'>
+          <view class='percent'>{{item.backRate}}</view>
+          <view class='back'>返佣比例</view>
+        </view>
+        <view class='lvli'>
+          <view class='percent1'>{{item.moneyRate}}</view>
+          <view class='year'>利率(年)</view>
+        </view>
+        <view class='edu'>
+          <view class='percent1'>{{item.loanQuota}}万</view>
+          <view class='year'>额度</view>
+        </view>
+        <view class='qixian'>
+          <view class='percent1'>{{item.loanTerm}}年</view>
+          <view class='year'>期限</view>
+        </view>
+      </view>
+    </view>
+    </block>
+ 
+</view>
+
